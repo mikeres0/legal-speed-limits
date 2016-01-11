@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>here-api-tests</title>
+  <meta name="description" content="legal-speed-limits">
+  <meta name="author" content="Mike Resoli">
+  <meta name="viewport" content="width=device-width, initial-scale=1">  
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+
+
+
+ 	<script src="../js/jquery220.min.js"></script>
+  <script>
+    var appId = "OmfJ4d0PbSYcQC5xNGOm";
+    var appCode = "6z7CWOffied7TQMP1WaGzw";
+
+    function getLinkInfo() {
+      var url = 'http://route.st.nlp.nokia.com/routing/6.2/getlinkinfo.json' +
+        '?app_id=' + appId +
+        '&app_code=' + appCode +
+        '&waypoint=51.898709,-0.170251';
+    
+      $.ajax({
+          url: url,
+          dataType: 'json',
+          success: function(data){
+            console.log(data)
+          }
+      });
+    }
+  </script>
+</body>
+</html>
